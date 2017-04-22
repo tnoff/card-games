@@ -25,17 +25,17 @@ public class Person {
         return money;
     }
 
-    public int addMoney(int amount){
+    public int addMoney(int amount) throws PersonException {
         if ( amount < 0 ){
-            //TODO throw exception
+            throw new PersonException();
         }
         money = money + amount;
         return money;
     }
 
-    public int subtractMoney(int amount){
+    public int subtractMoney(int amount) throws PersonException {
         if (( amount < 0 ) || ( amount > money )){
-            // TODO throw exception
+            throw new PersonException();
         }
         money = money - amount;
         return money;
