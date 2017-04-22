@@ -30,13 +30,17 @@ public class PlayingCardDeck {
         card_deck.add(new_card);
     }
 
-    public PlayingCard getPlayingCard(int index){
-        // TODO check index
+    public PlayingCard getPlayingCard(int index) throws PlayingCardException {
+        if ((index < 0) || (index > card_deck.size())) {
+            throw new PlayingCardException();
+        }
         return card_deck.get(index);
     }
 
-    public PlayingCard removePlayingCard(int index){
-        // TODO check index
+    public PlayingCard removePlayingCard(int index) throws PlayingCardException {
+        if ((index < 0) || (index > card_deck.size())) {
+            throw new PlayingCardException();
+        }
         return card_deck.remove(index);
     }
 
