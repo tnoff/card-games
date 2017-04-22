@@ -1,3 +1,5 @@
+package playing_cards;
+
 public class PlayingCard {
     private int suite;
     private int rank;
